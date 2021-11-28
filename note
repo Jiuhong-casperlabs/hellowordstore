@@ -1,0 +1,14 @@
+casper-client put-deploy --chain-name casper-test \
+--node-address http://16.162.124.124:7777 \
+--secret-key "/home/jh/keys/test99/secret_key.pem" \
+--session-path "/home/jh/rust/test10/contract/target/wasm32-unknown-unknown/release/contract.wasm" \
+--payment-amount 30000000000
+ 
+
+casper-client put-deploy --chain-name casper-test \
+--node-address http://16.162.124.124:7777 \
+--secret-key "/home/jh/keys/test99/secret_key.pem" \
+--payment-amount 1000000000 \
+--session-hash "hash-48C73bD137e90BcC3b9adC044f3530C58C12E51A64a6C714cb886EC3b9540904"   \
+--session-entry-point "store_string" \
+--session-arg "message:string='aaabbbccc'" 
